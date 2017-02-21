@@ -19,7 +19,7 @@
 <?php } ?>
 
 
-<!--  --------------------------------- -->
+<!--  -->
         <link href="catalog/view/theme/dariyut/stylesheet/fonts/stylesheet.css" type="text/css"  rel="stylesheet" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"  rel="stylesheet" />
         <link href="catalog/view/theme/dariyut/stylesheet/bootstrap/css/bootstrap.min.css" type="text/css"  rel="stylesheet" />
@@ -32,7 +32,7 @@
         <script src="catalog/view/theme/dariyut/stylesheet/js/slick.min.js"></script>
         <script src="catalog/view/theme/dariyut/stylesheet/bootstrap/js/bootstrap.min.js"></script>
         <script src="catalog/view/theme/dariyut/stylesheet/js/script.js"></script>
-<!--  --------------------------------- -->
+<!--   -->
 
 
 <!-- 
@@ -63,11 +63,10 @@
         <header>
             <div class="container">
                 <div class="header">
-                    <a  class="header-logo" href="/" ><img src="catalog/view/theme/dariyut/image/logo.png"></a>
-                    <form class="top-search">
-                        <input type="text" placeholder="Поиск по каталогу">
-                        <button type="submit"></button>
-                    </form>
+
+                    <a class="header-logo" href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
+                    <?php echo $search;?>
+
                     <ul class="header-menu">
                         <li><a href="/" >оплата и доставка</a></li>
                         <li><a href="/" >отзывы</a></li>
