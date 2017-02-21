@@ -65,7 +65,9 @@
                 <div class="header">
 
                     <a class="header-logo" href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
+                    
                     <?php echo $search;?>
+
 
                     <ul class="header-menu">
                         <li><a href="/" >оплата и доставка</a></li>
@@ -75,14 +77,14 @@
                     </ul>
                     <div class="header-callback">
                         <a href="#">заказать звонок</a><br>
-                        <span class="phone"><img src="catalog/view/theme/dariyut/image/ico-top-phone.png"> 8 (499) 340 31 22</span>
+                        <span class="phone"><img src="catalog/view/theme/dariyut/image/ico-top-phone.png"> <?php echo $telephone;?></span>
                     </div>
                 </div>
             </div>
         </header>
         <div class="top">
             <a class="hidden-md hidden-lg" href="/"><img class="mini-logo" src="catalog/view/theme/dariyut/image/logo.png"></a>
-            <a href="tel:84993403122" class="phone hidden-md hidden-lg"><img src="catalog/view/theme/dariyut/image/ico-footer-phone.png"></a>
+            <a href='tel:<?php echo $telephone; ?>' class="phone hidden-md hidden-lg"><img src="catalog/view/theme/dariyut/image/ico-footer-phone.png"></a>
             <a href="#" class="btn-mmenu fa-stack hidden-md hidden-lg" onclick="$('body').toggleClass('open-menu'); return false;"><i class="fa fa-bars fa-stack-1x foropen" aria-hidden="true"></i><i class="fa fa-times fa-stack-1x forclose" aria-hidden="true"></i></a>
 
             <div id="main-menu">
@@ -142,11 +144,14 @@
                         </a>
                     </li>
                     <li class="top-menu-item top-menu-item-10 top-menu-item-cart">
-                        <a href="#">
+                        <a href="<?php echo $shopping_cart;?>">
                             <img src="catalog/view/theme/dariyut/image/ico-top-cart.png"><br>
-                            моя корзина
+                            <?php echo $text_shopping_cart;?>
                         </a>
-                        <span class="top-cart-cntr">3</span>
+                        <span class="top-cart-cntr cart-total"><?php echo $cart; ?>
+
+
+                        </span>
                     </li>
 
                 </ul>
@@ -170,7 +175,7 @@
 
 
 
-<!-- 
+<!--
 <body class="<?php echo $class; ?>">
 <nav id="top">
   <div class="container">
@@ -193,7 +198,10 @@
             <?php } ?>
           </ul>
         </li>
+
         <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
+
+
         <li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span></a></li>
         <li><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></li>
       </ul>
