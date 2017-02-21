@@ -1,0 +1,104 @@
+@media (max-width: 479px) {
+    .index-top-promo-price {
+        font-size: 4vw;
+        width: 86%;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+}
+@media (max-width: 767px) {
+    .index-top-promo {
+        font-size: 8vw;
+        padding-left: 20px;
+    }
+    .index-timer {
+        font-size: 9vw;
+        flex-direction: column;
+        float: none !important;
+        clear: both;
+    }
+    .timer-digit {
+        width: 32px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 991px) {
+    header,
+    .top-menu-item img,
+    .top-menu-item br,
+    .top-menu-item::before
+    { display: none; }
+    .top-menu-item {
+        padding: 5px 0;
+        width: auto;
+        text-align: left;
+    }
+    .top-menu-item-cart {
+        margin: 0 -30px;
+        justify-content: flex-start;
+        padding: 5px 30px;
+    }
+    .top-cart-cntr {
+        margin-left: 2em;
+    }
+
+    .content {padding-top: 60px;}
+    .top {
+        padding: 10px 0;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: right;
+    }
+    #main-menu {
+        position: fixed;
+        top: 60px;
+        bottom: 100vh;
+        right: 0px;
+        left: 0;
+        background: #30b68b;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 0 30px;
+        overflow: hidden;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        text-align: left;
+    }
+    body.open-menu #main-menu {
+        bottom: 0px;
+        padding: 0 30px 30px;
+    }
+    body.open-menu {
+        overflow: hidden;
+    }
+    .top-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .top .header-menu > li {
+        display: block;
+        padding: 5px 0;
+    }
+    .top .header-menu > li > a {
+        color: #fff;
+    }
+}
+@media (min-width: 992px) and (max-width: 1269px) {
+    .header-logo > img {
+        width: 200px;
+    }
+    .header-callback > .phone {
+        font-size: 20px;
+    }
+    .top-search > input, .header-menu > li > a {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1270px) { }
