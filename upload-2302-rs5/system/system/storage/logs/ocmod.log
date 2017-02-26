@@ -1,0 +1,204 @@
+2017-02-25 12:09:23 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Tweak for OpenCart 2x Russkaya sborka
+
+FILE: admin/view/template/common/header.tpl
+CODE: <?php foreach ($links as $link) { ?>
+LINE: 33
+CODE: <li><a href="http://www.opencart.com" target="_blank"><?php echo $text_homepage; ?></a></li>
+LINE: 81
+CODE: <li><a href="http://docs.opencart.com" target="_blank"><?php echo $text_documentation; ?></a></li>
+LINE: 84
+CODE: <li><a href="http://forum.opencart.com" target="_blank"><?php echo $text_support; ?></a></li>
+LINE: 87
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <label class="col-sm-2 control-label" for="input-sku"><span data-toggle="tooltip" title="<?php echo $help_sku; ?>"><?php echo $entry_sku; ?></span></label>
+LINE: 109
+CODE: <label class="col-sm-2 control-label" for="input-sku">
+LINE: 115
+CODE: <label class="col-sm-2 control-label" for="input-location"><?php echo $entry_location; ?></label>
+LINE: 155
+CODE: <input type="text" name="model" value="<?php echo $model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
+LINE: 101
+
+FILE: admin/view/template/tool/backup.tpl
+CODE: <input type="file" name="import" id="input-import" />
+LINE: 36
+
+FILE: admin/controller/common/filemanager.php
+CODE: $this->load->language('common/filemanager');
+LINE: 13
+CODE: // Parent
+LINE: 148
+CODE: $pagination = new Pagination();
+LINE: 209
+CODE: $directory = rtrim(DIR_IMAGE . 'catalog/' . str_replace('*', '', $this->request->get['directory']), '/');
+LINE: 33
+CODE: $filter_name = rtrim(str_replace('*', '', $this->request->get['filter_name']), '/');
+LINE: 23
+CODE: if (substr(str_replace('\\', '/', realpath($directory . '/' . $filter_name)), 0, strlen(DIR_IMAGE . 'catalog')) == DIR_IMAGE . 'catalog') {
+LINE: 53
+
+FILE: admin/view/template/common/filemanager.tpl
+CODE: <?php foreach (array_chunk($images, 4) as $image) { ?>
+LINE: 34
+CODE: <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+LINE: 939
+
+FILE: admin/view/template/catalog/information_form.tpl
+CODE: <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+LINE: 209
+
+FILE: admin/view/template/catalog/category_form.tpl
+CODE: <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+LINE: 241
+
+FILE: admin/view/template/extension/module/html.tpl
+CODE: <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+LINE: 80
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+LINE: 95
+
+FILE: admin/view/template/extension/extension.tpl
+CODE: <?php echo $header; ?><?php echo $column_left; ?>
+LINE: 1
+
+FILE: admin/controller/common/column_left.php
+CODE: $data['lastname'] = $user_info['lastname'];
+LINE: 17
+CODE: $data['lastname'] = '';
+LINE: 31
+
+FILE: system/library/pagination.php
+CODE: $output .= '<li><a href="' . str_replace(array('&amp;page={page}', '&page={page}'), '', $this->url) . '">' . $this->text_first . '</a></li>';
+LINE: 35
+CODE: $output .= '<li><a href="' . str_replace(array('&amp;page={page}', '&page={page}'), '', $this->url) . '">' . $this->text_prev . '</a></li>';
+LINE: 40
+CODE: $output .= '<li><a href="' . str_replace(array('&amp;page={page}', '&page={page}'), '', $this->url) . '">' . $i . '</a></li>';
+LINE: 72
+
+FILE: catalog/controller/startup/startup.php
+CODE: $this->registry->set('openbay', new Openbay($this->registry));
+LINE: 196
+----------------------------------------------------------------
+MOD: Discount Percent
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'][] = array(
+LINE: 54
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'][] = array(
+LINE: 61
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'][] = array(
+LINE: 61
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'][] = array(
+LINE: 61
+
+FILE: catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 213
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 210
+
+FILE: catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 247
+
+FILE: catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 132
+
+FILE: catalog/controller/product/product.php
+CODE: if ((float)$product_info['special']) {
+LINE: 313
+CODE: $data['products'][] = array(
+LINE: 441
+
+FILE: catalog/view/theme/default/template/product/manufacturer_info.tpl
+CODE: <div class="caption">
+LINE: 66
+
+FILE: catalog/view/theme/default/template/product/product.tpl
+CODE: <?php if ($thumb) { ?>
+LINE: 26
+CODE: <a href="">
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/view/theme/default/template/extension/module/bestseller.tpl
+CODE: <div class="caption">
+LINE: 7
+
+FILE: catalog/view/theme/default/template/extension/module/featured.tpl
+CODE: <div class="caption">
+LINE: 7
+
+FILE: catalog/view/theme/default/template/extension/module/latest.tpl
+CODE: <div class="caption">
+LINE: 7
+
+FILE: catalog/view/theme/default/template/extension/module/special.tpl
+CODE: <div class="caption">
+LINE: 7
+
+FILE: catalog/view/theme/default/template/product/category.tpl
+CODE: <div class="caption">
+LINE: 103
+
+FILE: catalog/controller/product/compare.php
+CODE: $data['products'][$product_id] = array(
+LINE: 113
+
+FILE: catalog/view/theme/default/template/product/compare.tpl
+CODE: <strike><?php echo $product['price']; ?></strike> <?php echo $product['special']; ?>
+LINE: 52
+
+FILE: catalog/view/theme/dariyut/template/common/header.tpl
+CODE: </head>
+LINE: 59
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+----------------------------------------------------------------

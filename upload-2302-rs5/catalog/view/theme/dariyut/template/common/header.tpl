@@ -63,12 +63,8 @@
         <header>
             <div class="container">
                 <div class="header">
-
                     <a class="header-logo" href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
-                    
                     <?php echo $search;?>
-
-
                     <ul class="header-menu">
                         <li><a href="/" >оплата и доставка</a></li>
                         <li><a href="/" >отзывы</a></li>
@@ -77,7 +73,7 @@
                     </ul>
                     <div class="header-callback">
                         <a href="#">заказать звонок</a><br>
-                        <span class="phone"><img src="catalog/view/theme/dariyut/image/ico-top-phone.png"> <?php echo $telephone;?></span>
+                        <span class="phone"><img src="catalog/view/theme/dariyut/image/ico-top-phone.png"><?php echo $telephone;?></span>
                     </div>
                 </div>
             </div>
@@ -149,9 +145,7 @@
                             <?php echo $text_shopping_cart;?>
                         </a>
                         <span class="top-cart-cntr cart-total"><?php echo $cart; ?>
-
-
-                        </span>
+                       </span>
                     </li>
 
                 </ul>
